@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="題未定, ">
+
+
+        <title>TeX report template // 題未定 // </title>
+
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="theme/css/pure.css">
+    <link rel="stylesheet" href="https://www.lapis-zero09.xyz/theme/css/pygments.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-74593186-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".content").fitVids();
+        });
+    </script>
+</head>
+
+<body>
+    <div class="pure-g-r" id="layout">
+        <div class="sidebar pure-u">
+            <div class="cover-img" style="background: none repeat scroll 0% 0% #3D4F5D">
+                <div class="cover-body">
+                    <header class="header">
+                        <hgroup>
+                            <a href="https://www.lapis-zero09.xyz/about/about.html"><img class="avatar" src="./img/profile.jpg"></a>
+                            <h1 class="brand-main"><a href="https://www.lapis-zero09.xyz">題未定</a></h1>
+                            <p class="tagline"></p>
+                                <p class="social">
+                                    <a href="https://github.com/lapis-zero09">
+                                        <i class="fa fa-github fa-3x"></i>
+                                    </a>
+                                    <a href="https://twitter.com/lapis_zero09">
+                                        <i class="fa fa-twitter-square fa-3x"></i>
+                                    </a>
+                                    <a href="http://amzn.asia/8plng3k">
+                                        <i class="fa fa-gift fa-3x"></i>
+                                    </a>
+                                    <a href="http://qiita.com/lapis_zero09">
+                                        <i class="fa fa-search fa-3x"></i>
+                                    </a>
+                                </p>
+                        </hgroup>
+                    </header>
+                </div>
+            </div>
+        </div>
+    <div class="pure-u">
+        <div class="content">
+            <section class="post">
+                <header class="post-header">
+                    <h1>TeX report template</h1>
+                        <p class="post-meta">
+                            // under                                 <a class="post-category" href="https://www.lapis-zero09.xyz/tag/tex.html">TeX</a>
+                                <a class="post-category" href="https://www.lapis-zero09.xyz/tag/el_capitan.html">El_Capitan</a>
+                                <a class="post-category" href="https://www.lapis-zero09.xyz/tag/study.html">study</a>
+                        </p>
+                </header>
+            </section>
+            <h1>tex</h1>
+<h2>テンプレート</h2>
+<div class="highlight"><pre><span></span><span class="k">\documentclass</span><span class="na">[dvipdfmx]</span><span class="nb">{</span>jsarticle<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>graphicx<span class="nb">}</span>
+<span class="k">\title</span><span class="nb">{</span>タイトル<span class="nb">}</span>
+<span class="k">\author</span><span class="nb">{</span>学籍番号: <span class="k">\\</span>氏名:<span class="nb">}</span>
+<span class="k">\date</span><span class="nb">{</span><span class="k">\today</span><span class="nb">}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\maketitle</span>
+<span class="k">\section*</span><span class="nb">{</span>Sectionname<span class="nb">}</span>
+
+
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+
+
+<p>TeXshopでタイプセットボタンで実行</p>
+<h2>画像</h2>
+<ul>
+<li>h： その部分（here）</li>
+<li>t： ページの上（top）</li>
+<li>b： ページの下（bottom）</li>
+<li>p： 独立したページ</li>
+</ul>
+<h3>一枚</h3>
+<div class="highlight"><pre><span></span><span class="k">\documentclass</span><span class="na">[dvipdfmx]</span><span class="nb">{</span>jsarticle<span class="nb">}</span>
+
+
+<span class="k">\begin</span><span class="nb">{</span>figure<span class="nb">}</span>[hhbp]
+  <span class="k">\begin</span><span class="nb">{</span>center<span class="nb">}</span>
+    <span class="k">\includegraphics</span><span class="na">[width=8.0cm]</span><span class="nb">{</span>./pic.JPG<span class="nb">}</span>
+    <span class="k">\caption</span><span class="nb">{</span>caption<span class="nb">}</span>
+    <span class="k">\label</span><span class="nb">{</span>fig:figname<span class="nb">}</span>
+  <span class="k">\end</span><span class="nb">{</span>center<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>figure<span class="nb">}</span>
+
+
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span><span class="k">\documentclass</span><span class="na">[dvipdfmx]</span><span class="nb">{</span>jsarticle<span class="nb">}</span>
+
+
+図 <span class="k">\ref</span><span class="nb">{</span>fig:figname<span class="nb">}</span>...
+
+
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+
+
+<h3>横並び</h3>
+<div class="highlight"><pre><span></span><span class="k">\documentclass</span><span class="na">[dvipdfmx]</span><span class="nb">{</span>jsarticle<span class="nb">}</span>
+
+
+
+<span class="k">\begin</span><span class="nb">{</span>figure<span class="nb">}</span>[htbp]
+  <span class="k">\begin</span><span class="nb">{</span>center<span class="nb">}</span>
+      <span class="k">\begin</span><span class="nb">{</span>tabular<span class="nb">}{</span>c<span class="nb">}</span>
+
+          <span class="k">\begin</span><span class="nb">{</span>minipage<span class="nb">}{</span>0.33<span class="k">\hsize</span><span class="nb">}</span>
+              <span class="k">\begin</span><span class="nb">{</span>center<span class="nb">}</span>
+                  <span class="k">\includegraphics</span><span class="na">[width=5.0cm]</span><span class="nb">{</span>./1.JPG<span class="nb">}</span>
+                  <span class="k">\hspace</span><span class="nb">{</span>1.6cm<span class="nb">}</span> [1]caption1
+              <span class="k">\end</span><span class="nb">{</span>center<span class="nb">}</span>
+          <span class="k">\end</span><span class="nb">{</span>minipage<span class="nb">}</span>
+
+          <span class="k">\begin</span><span class="nb">{</span>minipage<span class="nb">}{</span>0.33<span class="k">\hsize</span><span class="nb">}</span>
+              <span class="k">\begin</span><span class="nb">{</span>center<span class="nb">}</span>
+                  <span class="k">\includegraphics</span><span class="na">[width=5.0cm]</span><span class="nb">{</span>./2.JPG<span class="nb">}</span>
+                  <span class="k">\hspace</span><span class="nb">{</span>1.6cm<span class="nb">}</span> [2]caption2
+              <span class="k">\end</span><span class="nb">{</span>center<span class="nb">}</span>
+          <span class="k">\end</span><span class="nb">{</span>minipage<span class="nb">}</span>
+
+          <span class="k">\begin</span><span class="nb">{</span>minipage<span class="nb">}{</span>0.33<span class="k">\hsize</span><span class="nb">}</span>
+              <span class="k">\begin</span><span class="nb">{</span>center<span class="nb">}</span>
+                  <span class="k">\includegraphics</span><span class="na">[width=5.0cm]</span><span class="nb">{</span>./3.JPG<span class="nb">}</span>
+                  <span class="k">\hspace</span><span class="nb">{</span>1.6cm<span class="nb">}</span> [3]caption3
+              <span class="k">\end</span><span class="nb">{</span>center<span class="nb">}</span>
+          <span class="k">\end</span><span class="nb">{</span>minipage<span class="nb">}</span>
+
+      <span class="k">\end</span><span class="nb">{</span>tabular<span class="nb">}</span>
+      <span class="k">\caption</span><span class="nb">{</span>caption<span class="nb">}</span>
+      <span class="k">\label</span><span class="nb">{</span>fig:figname<span class="nb">}</span>
+  <span class="k">\end</span><span class="nb">{</span>center<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>figure<span class="nb">}</span>
+
+
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span><span class="k">\documentclass</span><span class="na">[dvipdfmx]</span><span class="nb">{</span>jsarticle<span class="nb">}</span>
+
+
+図 <span class="k">\ref</span><span class="nb">{</span>fig:figname<span class="nb">}</span>[n:1~3]...
+
+
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+
+
+<h2>箇条書き</h2>
+<div class="highlight"><pre><span></span><span class="k">\documentclass</span><span class="na">[dvipdfmx]</span><span class="nb">{</span>jsarticle<span class="nb">}</span>
+
+
+# ドット
+<span class="k">\begin</span><span class="nb">{</span>itemize<span class="nb">}</span>
+    <span class="k">\item</span>
+    <span class="k">\item</span>
+    <span class="k">\item</span>
+<span class="k">\end</span><span class="nb">{</span>itemize<span class="nb">}</span>
+
+#入れ子
+<span class="k">\begin</span><span class="nb">{</span>itemize<span class="nb">}</span>
+    <span class="k">\item</span>
+        <span class="k">\begin</span><span class="nb">{</span>itemize<span class="nb">}</span>
+            <span class="k">\item</span>
+            <span class="k">\item</span>
+            <span class="k">\item</span>
+         <span class="k">\end</span><span class="nb">{</span>itemize<span class="nb">}</span>
+    <span class="k">\item</span>
+    <span class="k">\item</span>
+<span class="k">\end</span><span class="nb">{</span>itemize<span class="nb">}</span>
+
+# 記号任意
+<span class="k">\begin</span><span class="nb">{</span>itemize<span class="nb">}</span>
+    <span class="k">\item</span><span class="na">[$\clubsuit$]</span>
+    <span class="k">\item</span><span class="na">[$F=ma$]</span>
+    <span class="k">\item</span><span class="na">[文字もOK]</span>
+<span class="k">\end</span><span class="nb">{</span>itemize<span class="nb">}</span>
+
+# 番号
+<span class="k">\begin</span><span class="nb">{</span>enumerate<span class="nb">}</span>
+    <span class="k">\item</span>
+    <span class="k">\item</span>
+    <span class="k">\item</span>
+<span class="k">\end</span><span class="nb">{</span>enumerate<span class="nb">}</span>
+
+
+# 見出しつき
+<span class="k">\begin</span><span class="nb">{</span>description<span class="nb">}</span>
+    <span class="k">\item</span><span class="na">[]</span>
+    <span class="k">\item</span><span class="na">[]</span>
+    <span class="k">\item</span><span class="na">[]</span>
+    <span class="k">\item</span><span class="na">[]</span>
+    <span class="k">\item</span><span class="na">[]</span>
+    <span class="k">\item</span><span class="na">[]</span>
+<span class="k">\end</span><span class="nb">{</span>description<span class="nb">}</span>
+
+# 見出し後改行
+<span class="k">\begin</span><span class="nb">{</span>description<span class="nb">}</span>
+    <span class="k">\item</span><span class="na">[]</span><span class="k">\mbox</span><span class="nb">{}</span><span class="k">\\</span>
+    　　string
+    <span class="k">\item</span><span class="na">[]</span><span class="k">\mbox</span><span class="nb">{}</span><span class="k">\\</span>
+        string
+    <span class="k">\item</span><span class="na">[]</span><span class="k">\mbox</span><span class="nb">{}</span><span class="k">\\</span>
+        string
+<span class="k">\end</span><span class="nb">{</span>description<span class="nb">}</span>
+
+
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+
+
+<h2>引用・参考文献</h2>
+<div class="highlight"><pre><span></span><span class="k">\documentclass</span><span class="na">[dvipdfmx]</span><span class="nb">{</span>jsarticle<span class="nb">}</span>
+
+
+
+#e.g.1
+<span class="k">\begin</span><span class="nb">{</span>thebibliography<span class="nb">}{</span>2:文献の数だけ<span class="nb">}</span>
+    <span class="k">\bibitem</span><span class="nb">{</span>Preece<span class="nb">}</span>Jenny Preece, Helen Sharp, Yvonne Rogers. Interaction Design: Beyond Human-Computer Interaction. 2th ed., Wiley, 2007, xxvi, 775p.
+    <span class="k">\bibitem</span><span class="nb">{</span>norman<span class="nb">}</span>ドナルド・A. ノーマン, 野島 久雄. 誰のためのデザイン?—認知科学者のデザイン原論. 新曜社, 1990, 427p.
+<span class="k">\end</span><span class="nb">{</span>thebibliography<span class="nb">}</span>
+
+#e.g.2
+<span class="k">\begin</span><span class="nb">{</span>thebibliography<span class="nb">}{</span>4<span class="nb">}</span>
+  <span class="k">\bibitem</span><span class="nb">{</span>pocket<span class="nb">}</span>&quot;Pocket&quot;．Pocket．https://getpocket.com/，(参照  2016-5-13)．
+  <span class="k">\bibitem</span><span class="nb">{</span>recommends<span class="nb">}</span>&quot;Pocket：おすすめ&quot;．Pocket．https://getpocket.com/a/recommended/，(参照  2016-5-13)．
+  <span class="k">\bibitem</span><span class="nb">{</span>blog<span class="nb">}</span>&quot;Introducing the Pocket Beta Channel — Medium&quot;．Introducing the Pocket Beta Channel．https://medium.com/@nateweiner/introducing-the-pocket-beta-channel-9c348d60dd1a¥#.4y4mt2r3u，(参照  2016-5-13)．
+  <span class="k">\bibitem</span><span class="nb">{</span>shima<span class="nb">}</span>神嶌敏弘. 推薦システムのアルゴリズム(3). 人工知能学会誌. 2008, vol. 23, p. 248-263.
+<span class="k">\end</span><span class="nb">{</span>thebibliography<span class="nb">}</span>
+
+
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+
+
+<p>sist02 - <a href="https://jipsti.jst.go.jp/sist/handbook/sist02_2007/main.htm">https://jipsti.jst.go.jp/sist/handbook/sist02_2007/main.htm</a></p>
+<div class="highlight"><pre><span></span><span class="k">\documentclass</span><span class="na">[dvipdfmx]</span><span class="nb">{</span>jsarticle<span class="nb">}</span>
+
+
+ノーマン <span class="k">\cite</span><span class="nb">{</span>norman<span class="nb">}</span> による...
+
+
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+
+
+<p>「参考文献」という文字を変えたい時，<br />
+プリアンブルにrenewcommandを追記  </p>
+<div class="highlight"><pre><span></span><span class="k">\documentclass</span><span class="na">[dvipdfmx]</span><span class="nb">{</span>jsarticle<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>graphicx,here<span class="nb">}</span>
+<span class="k">\renewcommand</span><span class="nb">{</span><span class="k">\refname</span><span class="nb">}{</span>new<span class="nb">_</span>name<span class="nb">}</span>
+</pre></div>
+
+
+<h2>ソースコードの付与</h2>
+<div class="highlight"><pre><span></span><span class="k">\documentclass</span><span class="na">[dvipdfmx]</span><span class="nb">{</span>jsarticle<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>graphicx,listings,jlisting<span class="nb">}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+
+
+# コードを取り込む
+<span class="k">\lstinputlisting</span><span class="na">[caption=report,label=report,numbers=left,frame=shadowbox]</span><span class="nb">{</span>test.py<span class="nb">}</span>
+
+
+# コードを記述する
+<span class="k">\begin</span><span class="nb">{</span>lstlisting<span class="nb">}</span>[caption=report,label=report]
+  ソースコード
+<span class="k">\end</span><span class="nb">{</span>lstlisting<span class="nb">}</span>
+
+
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+
+# 編集テンプレート
+
+<span class="k">\lstset</span><span class="nb">{</span><span class="c">%listings の表示設定</span>
+breaklines = true,<span class="c">%自動で折り返す</span>
+tabsize = 2,<span class="c">%tabsize</span>
+frame=shadowbox,<span class="c">%枠を上下左右に表示する</span>
+basicstyle = <span class="k">\scriptsize</span>,<span class="c">%\footnotesize,</span>
+showstringspaces=false,<span class="c">%文字列中のスペースをちゃんと&quot; &quot;と表示(デフォルトは文字列中のスペースは可視設定)</span>
+numbers=left,<span class="c">%行番号を左に</span>
+framexleftmargin=6mm,<span class="c">%行番号をフレーム内に</span>
+numberstyle=<span class="k">\scriptsize</span>,<span class="c">%行番号のサイズ</span>
+stepnumber=1,<span class="c">%1行おきに行番号を</span>
+numbersep=1zw,<span class="c">%ソースと行番号の間隔</span>
+language = <span class="nb">}</span><span class="c">%言語設定</span>
+
+<span class="k">\renewcommand</span><span class="nb">{</span><span class="k">\thelstnumber</span><span class="nb">}{</span><span class="k">\arabic</span><span class="nb">{</span>lstnumber<span class="nb">}</span>:<span class="nb">}</span> <span class="c">%行番号の表示形式変更番号の後に:をつける。前に付けたい場合はnumberstyleに書く</span>
+</pre></div>
+
+
+<h2>数式でベクトルを表す</h2>
+<div class="highlight"><pre><span></span><span class="err">\</span><span class="n">def</span><span class="err">\</span><span class="n">vector</span><span class="err">#</span><span class="mi">1</span><span class="p">{</span><span class="err">\</span><span class="n">mbox</span><span class="p">{</span><span class="err">\</span><span class="n">boldmath</span> <span class="err">$#</span><span class="mi">1</span><span class="err">$</span><span class="p">}}</span>
+
+<span class="err">\</span><span class="n">begin</span><span class="p">{</span><span class="n">document</span><span class="p">}</span>
+
+<span class="o">%</span><span class="err">太文字</span>
+<span class="err">\</span><span class="n">mathbf</span><span class="p">{</span><span class="n">a</span><span class="p">}</span><span class="o">+</span><span class="err">\</span><span class="n">mathbf</span><span class="p">{</span><span class="n">b</span><span class="p">}</span><span class="o">+</span><span class="err">\</span><span class="n">mathbf</span><span class="p">{</span><span class="n">c</span><span class="p">}</span>
+
+<span class="o">%</span><span class="err">イタリック太文字</span>
+<span class="err">\</span><span class="n">mbox</span><span class="p">{</span><span class="err">\</span><span class="n">boldmath</span> <span class="n">$a</span><span class="err">$</span><span class="p">}</span><span class="o">+</span><span class="err">\</span><span class="n">mbox</span><span class="p">{</span><span class="err">\</span><span class="n">boldmath</span> <span class="n">$b</span><span class="err">$</span><span class="p">}</span><span class="o">+</span><span class="err">\</span><span class="n">mbox</span><span class="p">{</span><span class="err">\</span><span class="n">boldmath</span> <span class="n">$c</span><span class="err">$</span><span class="p">}</span>
+<span class="nf">%or</span>
+<span class="err">$\</span><span class="n">vector</span><span class="p">{</span><span class="n">a</span><span class="p">}</span><span class="o">+</span><span class="err">\</span><span class="n">vector</span><span class="p">{</span><span class="n">b</span><span class="p">}</span><span class="o">+</span><span class="err">\</span><span class="n">vector</span><span class="p">{</span><span class="n">c</span><span class="p">}</span><span class="err">$</span>
+
+<span class="err">\</span><span class="n">mathbf</span><span class="p">{</span><span class="err">\</span><span class="n">hat</span><span class="p">{</span><span class="n">x</span><span class="p">}}</span><span class="o">+</span><span class="err">\</span><span class="n">mathbf</span><span class="p">{</span><span class="err">\</span><span class="n">hat</span><span class="p">{</span><span class="n">y</span><span class="p">}}</span><span class="o">+</span><span class="err">\</span><span class="n">mathbf</span><span class="p">{</span><span class="err">\</span><span class="n">hat</span><span class="p">{</span><span class="n">z</span><span class="p">}}</span> <span class="o">%</span><span class="err">単位ベクトル</span><span class="p">(</span><span class="err">ハット</span><span class="p">)</span>
+
+<span class="err">\</span><span class="n">end</span><span class="p">{</span><span class="n">document</span><span class="p">}</span>
+</pre></div>
+
+
+<p>以上．</p>
+            <a href="#" class="go-top">Go Top</a>
+<footer class="footer">
+    <p>&copy; lapis_zero09 &ndash;
+        Built with <a href="https://github.com/PurePelicanTheme/pure-single">Pure Theme</a>
+        for <a href="http://blog.getpelican.com/">Pelican</a>
+    </p>
+</footer>        </div>
+    </div>
+    </div>
+    <script>
+        var $top = $('.go-top');
+
+        // Show or hide the sticky footer button
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+                $top.fadeIn(200);
+            } else {
+                $top.fadeOut(200);
+            }
+        });
+
+        // Animate the scroll to top
+        $top.click(function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop: 0}, 300);
+        })
+
+        // Makes sure that the href="#" attached to the <a> elements
+        // don't scroll you back up the page.
+        $('body').on('click', 'a[href="#"]', function(event) {
+            event.preventDefault();
+        });
+    </script>
+
+</body>
+</html>
