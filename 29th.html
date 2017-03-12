@@ -359,6 +359,9 @@ $$</div>
 <p>対象は<a href="http://www.rondhuit.com/download.html#ldcc">livedoorニュースコーパス</a></p>
 <p>コードはここ(<a href="https://github.com/lapis-zero09/compare_word_embedding">https://github.com/lapis-zero09/compare_word_embedding</a>)に</p>
 <p>全記事に対して，preprocess.pyで形態素解析を行い，gensimで処理可能な形にする．</p>
+<p>解析器にはMeCabを用いて，辞書はipadic-nelogd</p>
+<p>glove_pythonの導入に戸惑ったMacユーザは以下のREADMEを参照すると良いかも</p>
+<p><a href="https://github.com/lapis-zero09/compare_word_embedding">https://github.com/lapis-zero09/compare_word_embedding</a></p>
 <p>全ての形態素の原型を取り出し，一記事を一行にまとめる．</p>
 <p>それぞれの学習は，</p>
 <div class="highlight"><pre><span></span>$ python w2v.py
@@ -399,6 +402,10 @@ svd
 </pre></div>
 
 
+<p>パラメータ最適化とかは以下の論文を参照のこと</p>
+<ul>
+<li><a href="https://transacl.org/ojs/index.php/tacl/article/view/570">Improving Distributional Similarity with Lessons Learned from Word Embeddings</a></li>
+</ul>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
